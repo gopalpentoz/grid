@@ -12,6 +12,19 @@
 */
 
 Route::get('/', function () {
-	$p = Mongo::get()->grid->profiles;
-    return $p->find()->toArray();
+	$collection = Mongo::get()->grid->profiles;
+$tmp_id = uniqid('',true);
+$insertOneResult = $collection->insertOne([
+    'username' => 'change',
+    'email' => 'change@example.com',
+    'name' => 'test User',
+    'uuid' => $tmp_id 
+]);
+
+//printf("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());
+
+var_dump($insertOneResult);
 });
+
+
+Route::get('/profile/{id}', 'ProfileController@index');
