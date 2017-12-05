@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$p = Mongo::get()->grid->profiles;
+    return $p->find()->toArray();
 });

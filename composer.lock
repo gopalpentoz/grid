@@ -4,8 +4,69 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a12b58273f314ee4611258d0573a5af",
+    "content-hash": "2e0e746d58ec2eefc0c92b8a0d216749",
     "packages": [
+        {
+            "name": "devmarketer/laramongo",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DevMarketer/LaraMongo.git",
+                "reference": "a993745754c760cef6f7babdc6c2a3d23c2656d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DevMarketer/LaraMongo/zipball/a993745754c760cef6f7babdc6c2a3d23c2656d5",
+                "reference": "a993745754c760cef6f7babdc6c2a3d23c2656d5",
+                "shasum": ""
+            },
+            "require": {
+                "mongodb/mongodb": "^1.1",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DevMarketer\\LaraMongo\\MongoServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mongo": "DevMarketer\\LaraMongo\\MongoFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DevMarketer\\LaraMongo": "src/"
+                },
+                "files": [
+                    "src/DevMarketer/LaraMongo/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "J. Alexander Curtis",
+                    "email": "hello@devmarketer.io"
+                }
+            ],
+            "description": "A wrapper for MongoDB's PHP Library for Use in Laravel. Enabling access to native methods of the Mongo PHP Library under the Mongo facade in Laravel. This package also extends the Mongo PHP library by enabling Mongo commands that the native PHP library doesn't support, such as GeoSpatial commands.",
+            "homepage": "https://github.com/DevMarketer/LaraMongo",
+            "keywords": [
+                "facade",
+                "geospatial",
+                "gis",
+                "helpers",
+                "laravel",
+                "mongo",
+                "mongodb",
+                "nosql"
+            ],
+            "time": "2017-10-02T03:52:48+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
